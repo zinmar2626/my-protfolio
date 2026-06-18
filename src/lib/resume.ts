@@ -113,6 +113,10 @@ export const resumeData: ResumeData = {
       category: 'Tools',
       items: ['Git', 'Bitbucket', 'GitHub Actions', 'Lighthouse CI'],
     },
+    {
+      category: 'Vibe Code',
+      items: ['Claude Code', 'MCP', 'AI Agents', 'Subagents'],
+    },
   ],
 
   projects: [

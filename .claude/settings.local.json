@@ -16,5 +16,9 @@
       "Bash(git commit *)",
       "Bash(git push *)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "filesystem",
+    "github"
+  ]
 }
