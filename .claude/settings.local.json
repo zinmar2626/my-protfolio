@@ -12,7 +12,9 @@
       "Bash(open *)",
       "Bash(npx next *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
