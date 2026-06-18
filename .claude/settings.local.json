@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest *)"
+      "Bash(npx create-next-app@latest *)",
+      "Bash(npm run *)",
+      "Bash(mkdir -p ~/Library/Preferences/nextjs-nodejs)",
+      "Bash(chmod 755 ~/Library/Preferences/nextjs-nodejs)",
+      "Read(//Users/user/Library/Preferences/nextjs-nodejs/**)",
+      "Bash(sudo chown *)",
+      "Bash(NODE_OPTIONS=\"--no-warnings\" NEXT_TELEMETRY_DISABLED=1 npm run *)",
+      "Bash(npm install *)",
+      "Bash(open *)",
+      "Bash(npx next *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
     ]
   }
 }
