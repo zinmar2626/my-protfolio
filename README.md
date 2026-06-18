@@ -72,8 +72,6 @@ Configured in `.mcp.json`:
 | ------------ | --------------------------------------- |
 | `github`     | Manage repos, PRs, issues, commits      |
 | `filesystem` | Read/write files within the project     |
-| `ide`        | Execute code and get diagnostics in VS Code |
-| `pencil`     | Design system and UI prototyping (.pen files) |
 
 ## Environment
 
