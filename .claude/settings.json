@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-server-filesystem",
+        "/Users/user/VibeCodeTour/my-portfolio"
+      ]
+    }
+  },
+  "project": {
+    "name": "my-portfolio",
+    "description": "Personal portfolio website built with React, Next.js, and Tailwind CSS",
+    "framework": "nextjs",
+    "language": "typescript",
+    "styling": "tailwind-css",
+    "strictMode": true
+  },
+  "workspace": {
+    "root": "/Users/user/VibeCodeTour/my-portfolio",
+    "srcDir": "src",
+    "publicDir": "public",
+    "componentsDir": "src/components",
+    "pagesDir": "src/app"
+  },
+  "formatting": {
+    "indentSize": 2,
+    "useTabs": false,
+    "semicolons": true,
+    "singleQuotes": true,
+    "trailingComma": "es5",
+    "maxLineLength": 100
+  },
+  "performance": {
+    "imageOptimization": true,
+    "lazyLoading": true,
+    "codeSplitting": true,
+    "bundleAnalysis": false
+  },
+  "seo": {
+    "generateMetadata": true,
+    "generateSitemap": true,
+    "generateRobotsTxt": true,
+    "openGraph": true,
+    "structuredData": true
+  }
+}
