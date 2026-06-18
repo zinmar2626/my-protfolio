@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zin Mar Win — Portfolio
+
+**Portfolio** — Senior Frontend Developer with 6+ years of experience crafting accessible, high-performance web applications across fintech, e-commerce, travel, and ed-tech.
+
+## Demo
+
+🔗 **[zinmarwin.vercel.app](https://zinmarwin.vercel.app/)**
+
+## Screenshot
+
+<img width="2880" height="2440" alt="zinmarwin-vercel-app-2026-06-18-22_12_54" src="https://github.com/user-attachments/assets/6a3220ed-4568-4ab0-8a88-48cd0adfb5b0" />
+
+## Language & Tools
+
+| Category    | Stack                                                              |
+| ----------- | ------------------------------------------------------------------ |
+| Framework   | [Next.js 16](https://nextjs.org/) (App Router, Turbopack)          |
+| Language    | [TypeScript](https://www.typescriptlang.org/)                      |
+| Runtime     | [React 19](https://react.dev/)                                     |
+| Styling     | [Tailwind CSS v4](https://tailwindcss.com/)                        |
+| Linting     | [ESLint 9](https://eslint.org/) + [eslint-config-next](https://nextjs.org/docs/app/api-reference/config/eslint) |
+| Hosting     | [Vercel](https://vercel.com/)                                      |
+| Monitoring  | [Vercel Speed Insights](https://vercel.com/docs/speed-insights)    |
+| Package Mgr | npm                                                                |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server (Turbopack)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Production build
+npm run build
 
-## Learn More
+# Start production server
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Page       | Route          | Description                                   |
+| ---------- | -------------- | --------------------------------------------- |
+| Home       | `/`            | Hero, summary, and quick links                |
+| About      | `/about`       | Bio, education, and tech stack (skills grid)  |
+| Experience | `/experience`  | Work history with highlights per role         |
+| Projects   | `/projects`    | Featured projects with tags and links         |
+| Contact    | `/contact`     | Contact form and social links                 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Agent Skill
 
-## Deploy on Vercel
+This project includes AI-assisted development capabilities via Claude Code with MCP integration:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Claude Code** — primary AI coding agent for the terminal and IDE
+- **MCP (Model Context Protocol)** — connects Claude to external tools (GitHub API, filesystem, IDE diagnostics)
+- **AI Agents** — task-specific agents for code review, exploration, refactoring, and more
+- **Subagents** — parallelized sub-tasks spawned by the main agent to handle complex, multi-step workflows efficiently (e.g., parallel code audits, multi-file migrations)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### MCP Servers
+
+Configured in `.mcp.json`:
+
+| Server       | Purpose                                 |
+| ------------ | --------------------------------------- |
+| `github`     | Manage repos, PRs, issues, commits      |
+| `filesystem` | Read/write files within the project     |
+| `ide`        | Execute code and get diagnostics in VS Code |
+| `pencil`     | Design system and UI prototyping (.pen files) |
+
+## Environment
+
+Copy `.env.example` to `.env` and fill in your values:
+
+```bash
+cp .env.example .env
+```
+
+| Variable                         | Description                       |
+| -------------------------------- | --------------------------------- |
+| `GITHUB_PERSONAL_ACCESS_TOKEN`   | GitHub personal access token for MCP GitHub server |
+
+## Subagent Workflow
+
+Complex tasks are decomposed into parallel subagents for speed and reliability:
+
+1. **Explore** — subagent scans the codebase for relevant files and patterns
+2. **Plan** — findings are synthesized into an implementation plan
+3. **Implement** — targeted edits across multiple files
+4. **Verify** — adversarial review subagent checks for correctness and regressions
+
+This architecture keeps each subagent focused on a single concern, reducing context pollution and improving output quality.
+
+## License
+
+MIT
