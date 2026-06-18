@@ -10,7 +10,7 @@ auto-advance: 20
 # Who's my person?
 ### Zin Mar Win
 - **Role:** Senior Frontend Developer (6+ Years Experience)
-- **Background:** Ex-PropertyScout, AGD Bank, Oway.com.mm
+- **Background:** Ex-PropertyScout(th), AGD Bank, Oway.com.mm
 - **Mission:** Crafting high-performance, user-centric web apps
 ---
 
