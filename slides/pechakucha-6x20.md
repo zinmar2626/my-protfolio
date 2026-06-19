@@ -12,6 +12,7 @@ auto-advance: 20
 - **Role:** Senior Frontend Developer (6+ Years Experience)
 - **Background:** Ex-PropertyScout(th), AGD Bank, Oway.com.mm
 - **Mission:** Crafting high-performance, user-centric web apps
+
 ---
 
 <!-- slide 2 -->
@@ -20,6 +21,7 @@ auto-advance: 20
 - Static text resumes fail to demonstrate real-time web performance.
 - Recruiters need proof of modern stack mastery (React/Next.js/TS).
 - Hard to display code quality, speed optimization, and SEO skills at a glance.
+
 ---
 
 <!-- slide 3 -->
@@ -28,6 +30,7 @@ auto-advance: 20
 - Fast, interactive Next.js & TypeScript single-page application.
 - Fully responsive, accessible UI styled with Tailwind CSS.
 - Features optimized images, smooth theme toggles, and live project highlights.
+
 ---
 
 <!-- slide 4 -->
@@ -36,6 +39,7 @@ auto-advance: 20
 - **MCP:** Standard Filesystem server (`@anthropic/mcp-server-filesystem`) to allow direct workspace/code modifications.
 - **Skill:** `.claude/skills/portfolio-builder/SKILL.md` enforcing Tailwind and performance rules.
 - **Agent:** `.claude/agents/developer.md` configuring a custom Senior Developer system persona.
+
 ---
 
 <!-- slide 5 -->
@@ -44,6 +48,7 @@ auto-advance: 20
 - Proves a 25% loading speed improvement approach using Next.js core web vitals.
 - Demonstrates advanced AI-driven development workflows and automation tools.
 - Sets a solid foundation for robust, modular, and SEO-optimized web structures.
+
 ---
 
 <!-- slide 6 -->
