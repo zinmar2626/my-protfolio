@@ -116,6 +116,8 @@ export const resumeData: ResumeData = {
     {
       category: 'Vibe Code',
       items: ['Claude Code', 'MCP', 'AI Agents', 'Subagents'],
+      description:
+        'Building this portfolio site with Claude Code — AI-assisted development for rapid prototyping, code generation, and iterative refinement. Used MCP for context-aware edits, subagents for parallel task execution, and AI agents for automating repetitive workflows.',
     },
   ],
 
@@ -124,6 +126,20 @@ export const resumeData: ResumeData = {
       title: 'Property Scout Platform',
       description:
         'Led the architectural migration of a property listing and search platform to Next.js with SSR, achieving a 25% performance improvement. Features advanced filtering, saved searches, and a design system of 40+ components shared across the organization.',
+      highlights: [
+        'Improved Lighthouse performance score from 62 to 87 (+25%)',
+        'Reduced Largest Contentful Paint (LCP) from 3.8s to 1.9s',
+        'Built 40+ reusable components, cutting UI dev time by 30%',
+        'Automated performance budgets in CI/CD with Lighthouse CI',
+      ],
+      caseStudy: {
+        challenge:
+          'The legacy SPA suffered from slow initial loads and poor SEO. Users abandoned property searches when pages took over 4 seconds to render. The existing jQuery codebase made it impossible to implement server-side rendering without a full rewrite.',
+        approach:
+          'Migrated to Next.js with a hybrid rendering strategy — SSR for search results and listing pages (SEO-critical), static generation for marketing pages. Implemented incremental adoption by wrapping legacy components in React islands. Used code splitting and dynamic imports to keep bundle size manageable during the transition.',
+        lessonsLearned:
+          'Incremental migration beats big-bang rewrites. By introducing React alongside jQuery first, we could ship value immediately while reducing risk. The key insight was identifying which pages needed SSR (search results) vs. which could stay client-rendered (user dashboards).',
+      },
       url: 'https://www.propertyscout.co.th',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'SSR', 'Design System'],
     },
@@ -131,6 +147,20 @@ export const resumeData: ResumeData = {
       title: 'Oway Travel & Tour',
       description:
         'Built the frontend for Myanmar\'s leading online travel agency — a React SPA handling flight, hotel, and package bookings. Implemented multi-step checkout, i18n (English/Burmese), and an optimized search experience used by thousands of travelers monthly.',
+      highlights: [
+        'Served 50K+ monthly active users across Southeast Asia',
+        'Reduced booking abandonment by 18% with optimized checkout flow',
+        'Built reusable form system used across 15+ forms',
+        'Implemented full i18n support for English and Burmese locales',
+      ],
+      caseStudy: {
+        challenge:
+          'The booking flow required users to complete 5+ steps across flight, hotel, and package selections. Each step had complex validation rules and conditional fields. The existing implementation used deeply nested Redux state, making it fragile and hard to debug.',
+        approach:
+          'Redesigned the state management using React Context with custom hooks, isolating each booking step into its own context provider. Implemented Zod schemas for runtime validation with clear error messages. Built a reusable form system that could be composed from individual field components.',
+        lessonsLearned:
+          'Complex multi-step forms benefit from isolated state per step rather than a single global store. This made each step independently testable and easier to reason about. The Zod validation approach caught errors at the boundary rather than propagating invalid state downstream.',
+      },
       url: 'https://www.oway.com.mm',
       tags: ['React', 'TypeScript', 'i18n', 'REST APIs', 'Responsive'],
     },
