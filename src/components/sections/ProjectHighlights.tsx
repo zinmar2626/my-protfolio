@@ -58,6 +58,47 @@ function ProjectCard({
         {project.description}
       </p>
 
+      {/* Highlights */}
+      {project.highlights && project.highlights.length > 0 && (
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold text-foreground">Key Achievements</h4>
+          <ul className="mt-2 space-y-1.5" role="list">
+            {project.highlights.map((highlight, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-2 text-sm text-muted-foreground"
+              >
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Case Study */}
+      {project.caseStudy && (
+        <div className="mt-5 space-y-3 rounded-lg border border-border bg-muted/50 p-4">
+          <h4 className="text-sm font-semibold text-foreground">Case Study</h4>
+          <div className="space-y-3 text-sm">
+            <div>
+              <span className="font-medium text-primary">Challenge: </span>
+              <span className="text-muted-foreground">{project.caseStudy.challenge}</span>
+            </div>
+            <div>
+              <span className="font-medium text-primary">Approach: </span>
+              <span className="text-muted-foreground">{project.caseStudy.approach}</span>
+            </div>
+            {project.caseStudy.lessonsLearned && (
+              <div>
+                <span className="font-medium text-primary">Lessons Learned: </span>
+                <span className="text-muted-foreground">{project.caseStudy.lessonsLearned}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Tags */}
       {project.tags.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-1.5" role="list" aria-label="Technologies">

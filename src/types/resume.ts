@@ -36,12 +36,22 @@ export interface Education {
 export interface SkillGroup {
   category: string;
   items: string[];
+  /** Detailed explanation of this skill group */
+  description?: string;
 }
 
 /** A project entry for the portfolio / projects section. */
 export interface Project {
   title: string;
   description: string;
+  /** Key achievements and metrics */
+  highlights?: string[];
+  /** Deep-dive case study */
+  caseStudy?: {
+    challenge: string;
+    approach: string;
+    lessonsLearned?: string;
+  };
   url?: string;
   sourceUrl?: string;
   imagePath?: string;
