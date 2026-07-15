@@ -63,6 +63,13 @@ function SkillCard({ group }: SkillCardProps) {
           </li>
         ))}
       </ul>
+
+      {/* Description */}
+      {group.description && (
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-pretty">
+          {group.description}
+        </p>
+      )}
     </article>
   );
 }
